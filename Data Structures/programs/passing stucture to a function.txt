@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void read(struct student);
+void display(struct student);
+float avg(int,int,int);
+
+struct student
+{
+    char name[100];
+    char USN[100];
+    int m1,m2,m3;
+    float avg;
+};
+
+
+int main()
+{
+    int n,i;
+    printf("Enter the number of students: ");
+    scanf("%d",&n);
+    struct student s[n];
+    for ( i = 0; i < n; i++)
+    {
+        read(s[i]);
+    }
+    for ( i = 0; i < n; i++)
+    {
+        display(s[i]);
+    }
+    
+}
+void read(struct student s)
+{
+    printf("Enter the student name and USN and three subject marks: ");
+    gets(s.name);
+    gets(s.USN);
+    scanf("%d%d%d", &s.m1, &s.m2, &s.m3);
+    s.avg=avg(s.m1,s.m2,s.m3);
+    
+}
+
+void display(struct student s)
+{
+    int i;
+    printf(" The student name and USNs are: ");
+    for ( i = 0; i < 5; i++)
+    {
+        printf("%s\t",s.name);
+        printf("%s",s.USN);
+        printf("marks of sub1=%d, sub2=%d, sub3=%d\n",s.m1,s.m2,s.m3);
+        printf("Average= %f",s.avg);
+        printf("\n");
+    }
+}
+
+float avg(int x,int y,int z)
+{
+    int min=x;
+    if(y<min)
+        min=y;
+    else if(z<min)
+            min=z;
+    return((x+y+z-min)/2);
+}

@@ -1,0 +1,8 @@
+body     { padding-top:30px; }
+.container {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0e68c;
+}

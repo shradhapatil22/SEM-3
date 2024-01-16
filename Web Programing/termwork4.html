@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrapA.min.css">
+    <!-- <link rel="stylesheet" href="TW4.css"> -->
+
+    <!-- JS -->
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="validationApp" ng-controller="mainController">
+    <div class="container">
+
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <h1>Form Validation</h1>
+        </div>
+
+        <!-- pass in the variable if our form is valid or invalid -->
+        <form name="userForm" ng-submit="submitForm(userForm.$valid)" validate>
+
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{
+                 'has-error' : userForm.email.$invalid && !userForm.email.$pristine
+                }">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" ng-model="user.email" required>
+                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid
+                    email.</p>
+                <br>
+                Password:<input type="password" name="pwd1" />
+                Confirm&nbsp;&nbsp;:<input type="password" name="pwd2" />
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="checkPass()">Submit</button>
+            <!--button type="submit" class="btn btn-primary" onclick="checkPass()">Password</button-->
+
+        </form>
+    </div>
+</body>
+</html>

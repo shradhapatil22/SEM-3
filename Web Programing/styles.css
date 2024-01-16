@@ -1,0 +1,37 @@
+body {
+  background: #79DAE8;
+}
+
+h1 {
+  color: #2155CD;
+}
+
+.imgbox {
+  background-image: url('drag1.png');
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.whitebox {
+  height: 210px;
+  width: 210px;
+  margin: 20px;
+  background-color: white;
+  display: inline-block;
+}
+
+.hold {
+  border: solid red 4px;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
+
+.hide {
+  display: none;
+}

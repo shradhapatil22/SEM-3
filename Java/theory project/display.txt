@@ -1,0 +1,9 @@
+ void display()
+    {
+        System.out.println("NAme: "+ name);
+        System.out.println("ID:"+ ID);
+        System.out.println("Number of days : + no_of_days ");
+        System.out.println(" Number of borrowed books: +no_borrowed_books ");// assuming it's a new user
+        System.out.println(" Number of returned books: + no_returned_books ");
+        System.out.println("Enter the number of lost books: +no_lost_books ");
+    }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web local storage</title>
+  </head>
+  <body>
+    <div  id="local"></div>
+    <h2>This page was viewed <span id="count"></span> times</h2>
+    <script type="text/javascript">
+      if(!localStorage.pageLoadCount){
+        localStorage.pageLoadCount=0;
+      }
+      localStorage.pageLoadCount=parseInt(localStorage.pageLoadCount)+1;
+    document.getElementById('count').textContent=localStorage.pageLoadCount;
+    </script>
+
+  </body>
+</html>

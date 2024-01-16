@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<script src="angular-route.js"></script>
+
+<body ng-app="myApp">
+  <p><a href="#!I">India</a></p>
+  <p><a href="#!K">Karnataka</a></p>
+  <p><a href="#!B">Belagavi</a></p>
+  <div ng-view></div>
+  <script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+      $routeProvider
+        .when("/I", {
+          template: "<H1>India is a land of diversity</H1>"
+        })
+        .when("/K", {
+          template: "<H2>Karnataka is one of the Largest State in India</H2>"
+        })
+        .when("/B", {
+          template: "<H3>Belagavi is the Biggest District in Karnataka</H3>"
+        });
+    });
+  </script>
+</body>
+
+</html>

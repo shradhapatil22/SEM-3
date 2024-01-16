@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Default functionality</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            padding-top: 30px;
+        }
+
+        .container {
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            margin-top: 150px;
+            padding: 20px;
+            background: lightblue;
+        }
+    </style>
+
+    <style>
+        .ui-datepicker-trigger {
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+
+    <!-- Javascript -->
+    <script>
+        $(function () {
+            $("#StartDate").datepicker({
+                showOn: "button",
+                buttonImage: "drag1.png",
+                buttonImageOnly: true
+            });
+            // $(".ui-datepicker-trigger").css("height","40px");
+        });
+
+        $(function () {
+            $("#ReturnDate").datepicker({
+                showOn: "button",
+                buttonImage: "drag1.png",
+                buttonImageOnly: true
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h3>Select Start and End Date</h3>
+        </div>
+        <!-- HTML -->
+        <p>Start Date: <input type="text" id="StartDate"></p>
+        <p>Return Date: <input type="text" id="ReturnDate"></p>
+        <p><label name="lblName" id="StartDate"></label></p>
+    </div>
+</body>
+
+</html>
